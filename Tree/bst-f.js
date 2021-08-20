@@ -13,7 +13,7 @@ BST.prototype.addChildren = function(val){
         current = new Node(val);
         this.root = current;
     }
-    else{ // this could be a recursive thing
+    else{ /* can also be implemented using recursion- ./bst-c.js*/
         while(current!=null){
             if(val === current.val) return;
             if(val < current.val){
@@ -42,6 +42,7 @@ function constructTree(){
     bst.addChildren(40);
     bst.addChildren(10);
     bst.addChildren(60);
-
     bst.printTree();
 }
+
+constructTree();
