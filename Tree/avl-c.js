@@ -6,7 +6,7 @@ class Node{
     }
 }
 
-class BinarySearchTree{
+class AVLTree{
     constructor(){
         this.root = null;
     }
@@ -28,32 +28,32 @@ class BinarySearchTree{
         else this.insertNode(current.right,newNode);
        }
     }
-    height(current){
+    balanceFactor(current){
         if(current === null) return 0;
         else{
             let leftHeight = 0;
             let rightHeight = 0;
             if(current.left !== null){
-                leftHeight = this.height(current.left);
+                leftHeight = this.balanceFactor(current.left);
             }
             else if(current.right !== null){
-                rightHeight = this.height(current.right);
+                rightHeight = this.balanceFactor(current.right);
             }
 
-            return (leftHeight > rightHeight) ? leftHeight + 1 : rightHeight + 1;
+            return leftHeight - rightHeight;
         }
     }
 }
 
 (function run(){
-    var bstObj = new BinarySearchTree();
-    bstObj.insert(50);
-    bstObj.insert(40);
-    bstObj.insert(60);
-    //bstObj.insert(80);
-    //bstObj.insert(30);
-    console.log(bstObj);
-    console.log(bstObj.height(bstObj.root));
+    var avl = new AVLTree();
+    avl.insert(50);
+    avl.insert(40);
+    avl.insert(60);
+    //avl.insert(80);
+    //avl.insert(30);
+    console.log(avl);
+    console.log(avl.balanceFactor(avl.root.left));
 })();
 
 
