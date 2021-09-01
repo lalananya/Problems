@@ -42,7 +42,7 @@ class BinarySearchTree{
                 return true;
             }
         }
-             // issue here with the last node then what ?
+             // issue here with the last node then what ? 
     }
 }
 
