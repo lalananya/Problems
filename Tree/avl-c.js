@@ -28,21 +28,16 @@ class AVLTree{
         else this.insertNode(current.right,newNode);
        }
     }
-    balanceFactor(current){
-        if(current === null) return 0;
-        else{
-            let leftHeight = 0;
-            let rightHeight = 0;
-            if(current.left !== null){
-                leftHeight = this.balanceFactor(current.left);
-            }
-            else if(current.right !== null){
-                rightHeight = this.balanceFactor(current.right);
-            }
-
-            return leftHeight - rightHeight;
+    heightOfNode(current){
+        /* Will print the height of each node */
+        if(current === null) return ;
+        else {
+            /* max(height of left subtree, height of right subtree) + 1 */
+            /* we need to traverse the tree, calculate the height of each node thus, we are going to use PreOrder - Root Left Right */
+            //current.data + 
         }
     }
+    
 }
 
 (function run(){
@@ -50,10 +45,9 @@ class AVLTree{
     avl.insert(50);
     avl.insert(40);
     avl.insert(60);
-    //avl.insert(80);
-    //avl.insert(30);
-    console.log(avl);
-    console.log(avl.balanceFactor(avl.root.left));
+    avl.insert(80);
+    avl.insert(30);
+    avl.heightOfNode(avl.root);
 })();
 
 
