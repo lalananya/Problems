@@ -35,6 +35,14 @@ class AVLTree{
         console.log(`${current}, ${Math.max(leftTree,righTree)}`);
         return Math.max(leftTree,righTree);
     }
+
+    balanceFactor(current){
+        if(current === null) return -1;
+        let leftTree = this.heightofNode(current.left) + 1;
+        let righTree = this.heightofNode(current.right) + 1;
+        console.log(`${current}, ${leftTree - righTree}`);
+        return Math.max(leftTree,righTree);
+    }
     
 }
 
@@ -47,7 +55,7 @@ class AVLTree{
     avl.insert(80);
     avl.insert(90);
     avl.insert(30);
-    console.log(avl.heightofNode(avl.root));
+    console.log(avl.balanceFactor(avl.root));
 })();
 
 
