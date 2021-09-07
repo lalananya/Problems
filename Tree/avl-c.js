@@ -28,14 +28,15 @@ class AVLTree{
         else this.insertNode(current.right,newNode);
        }
     }
-    heightOfNode(current){
-        /* Will print the height of each node */
-        if(current === null) return ;
-        else {
-            /* max(height of left subtree, height of right subtree) + 1 */
-            /* we need to traverse the tree, calculate the height of each node thus, we are going to use PreOrder - Root Left Right */
-            //current.data + 
-        }
+    heightofNode(){
+         
+    }
+
+    heightOfLeftSubtree(){
+
+    }
+    heightOfRightSubtree(){
+
     }
     
 }
@@ -45,9 +46,11 @@ class AVLTree{
     avl.insert(50);
     avl.insert(40);
     avl.insert(60);
+    avl.insert(55);
     avl.insert(80);
+    avl.insert(90);
     avl.insert(30);
-    avl.heightOfNode(avl.root);
+    avl.heightOfNode(avl.root,-1);
 })();
 
 

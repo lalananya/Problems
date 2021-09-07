@@ -59,3 +59,8 @@ Buckle Up ! This is the methods which really required some thinking according to
  : if the value is at the left, current.left  = right saved subtree, then we'll traverse the right's subtree's left untill null when found we'll save the left saved subtree
  : similary for right !
  : This is because the Binary Search Trees have a pattern
+
+
+ CALCULATING HEIGHT AND RECURSION
+
+ So whenever, you say recursion you think stack ! './avl-c.js'
