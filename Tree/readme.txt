@@ -64,3 +64,7 @@ Buckle Up ! This is the methods which really required some thinking according to
  CALCULATING HEIGHT AND RECURSION
 
  So whenever, you say recursion you think stack ! './avl-c.js'
+ Finally ! after weeks of storming out brain, I did it !
+
+ - Keep visualizing all the function calls and maintain a stack on pen and paper,
+ - read the code one by one by calculating the output and voila !

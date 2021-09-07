@@ -28,15 +28,12 @@ class AVLTree{
         else this.insertNode(current.right,newNode);
        }
     }
-    heightofNode(){
-         
-    }
-
-    heightOfLeftSubtree(){
-
-    }
-    heightOfRightSubtree(){
-
+    heightofNode(current){
+        if(current === null) return -1;
+        let leftTree = this.heightofNode(current.left) + 1;
+        let righTree = this.heightofNode(current.right) + 1;
+        console.log(`${current}, ${Math.max(leftTree,righTree)}`);
+        return Math.max(leftTree,righTree);
     }
     
 }
@@ -50,7 +47,7 @@ class AVLTree{
     avl.insert(80);
     avl.insert(90);
     avl.insert(30);
-    avl.heightOfNode(avl.root,-1);
+    console.log(avl.heightofNode(avl.root));
 })();
 
 
