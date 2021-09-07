@@ -68,3 +68,4 @@ Buckle Up ! This is the methods which really required some thinking according to
 
  - Keep visualizing all the function calls and maintain a stack on pen and paper,
  - read the code one by one by calculating the output and voila !
+ - calculated the balance factor too
