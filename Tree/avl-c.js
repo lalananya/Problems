@@ -90,22 +90,23 @@ class AVLTree{
         if(imbalancedNode !== null){
             if(avl.insertType === 'LL'){
                 avl.performLLRotation(imbalancedNode);
-                console.log(avl);
+                avl.insertType = '';
             }
             if(avl.insertType === 'RR'){
                 avl.performRRRotation(imbalancedNode);
-                console.log(avl);
+                avl.insertType = '';
             }
             if(avl.insertType === 'LR'){
                 avl.performLRRotation(imbalancedNode);
-                console.log(avl);
+                avl.insertType = '';
             }
             if(avl.insertType === 'RL'){
                 avl.performRLRotation(imbalancedNode);
-                console.log(avl);
+                avl.insertType = '';
             }
         }
     }
+    console.log(avl);
 })();
 
 /* Needs more logic and improvement overall */
