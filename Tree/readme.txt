@@ -69,3 +69,11 @@ Buckle Up ! This is the methods which really required some thinking according to
  - Keep visualizing all the function calls and maintain a stack on pen and paper,
  - read the code one by one by calculating the output and voila !
  - calculated the balance factor too
+
+ ROTATION
+ - With respect to three nodes, rotation done, need to work on getting the rotation type and then choosing which type of rotation we need
+
+ COMPARISION AVL AND BST
+ - We already know that when BST inserts the elements on one side, the search time increases.
+ - By balancing it, we can reduce the search time hence AVL
+ - Will be using these concepts in runway reservation system later.
