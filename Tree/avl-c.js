@@ -82,12 +82,13 @@ class AVLTree{
 
 (function run(){
     var avl = new AVLTree();
-    //var arr = [50,40,60,55,80,90,30];
-    var arr = [50,60,55];
+    var arr = [50,40,60,55,80,90,30];
+    //var arr = [50,60,55];
     for(let i=0; i<arr.length; i++){
         avl.insert(arr[i]);
         let imbalancedNode = avl.balanceFactor(avl.root);
         if(imbalancedNode !== null){
+            console.log(i,'->',avl.insertType,'-<',imbalancedNode);
             if(avl.insertType === 'LL'){
                 avl.performLLRotation(imbalancedNode);
                 avl.insertType = '';
@@ -106,7 +107,6 @@ class AVLTree{
             }
         }
     }
-    console.log(avl);
 })();
 
 /* Needs more logic and improvement overall */
